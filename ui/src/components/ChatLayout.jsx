@@ -83,7 +83,7 @@ export default function ChatLayout() {
                     <div className="flex items-center gap-3 overflow-hidden">
                         <MessageSquare size={16} className={conversationId === conv.id ? 'text-blue-400' : 'text-gray-500'} />
                         <span className="text-sm truncate w-32">
-                            {new Date(conv.createdAt).toLocaleDateString()}
+                            {new Date(conv.createdAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' })}
                         </span>
                     </div>
                     <button 
